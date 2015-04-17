@@ -9,14 +9,15 @@ the array without any duplicates. Don’t use Ruby’s uniq method!
 
 
 #def unique(arr)
-	#if each element is not equal to any other element, it stays
-	#else it is taken out
-#return arr
+	#inject array into hash
+	#conditionally set each key to 0
+	#increment each value by one for each instance of a key
+	#return hash keys as array
 #end
 
 def unique(arr)
 	h = arr.inject({}) {|hash, val| hash[val] ||=0; hash[val] +=1;hash}
-	h.keys.to_s
+	return h.keys.to_s
 end
 
 puts unique(["dog", "dog", "cat", "owl", "cat", "tiger", "lion", "tiger"])
