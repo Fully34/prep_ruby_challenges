@@ -6,44 +6,17 @@ def counting_game(num)
 
 	count = 0
 
-	player = 1
-
+	player = 0
 	rev = false
+	#skip = false
 
-	skip = false
 
-	while count <= num
-		if rev = false 
-			count +=1
-			player += 1
-			game << [count,player]
-		elsif rev != false
-			count +=1
-			player -= 1
-			game << [count,player]
-		elsif (rev == false) #&& (skip == false)
-			count += 1
-			player += 1
-			game << [count, player]
-		elsif (rev != false) #&& (skip == false)
-			count += 1
-			player -= 1
-			game << [count,player]
-			rev = false
-		# #elsif (rev == false) #&& (skip != false)
-		# 	count += 1
-		# 	player += 2
-		# 	game << [count,player]
-		# #elsif (rev != false) #&& (skip !=false)
-		# 	count =+ 1
-		# 	player -= 2
-		# 	game << [count,player]
-		end
+	while count < num
 		count +=1
 		player +=1
 		game << [count,player]
 	end
-	return game
-end 
+	print game.to_s
+end
 
-print counting_game(10)
+counting_game(10)
