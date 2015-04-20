@@ -16,7 +16,8 @@ the array without any duplicates. Don’t use Ruby’s uniq method!
 #end
 
 def unique(arr)
-	h = arr.inject({}) {|hash, val| hash[val] ||=0; hash[val] +=1;hash}
+	#h = arr.inject({}) {|hash, val| hash[val] ||=0; hash[val] +=1;hash} MAX SHOWED BETTER WAY
+	h = arr.inject({}){|hash, val| hash[val] = 0; hash} #THIS MAKES EVERY HASH VALUE 0!  WHICH WORKS FOR THE PROBLEM, BUT REMEMBER THAT THE ABOVE METHOD IS COUNTING VALUES AND KEEPING TRACK
 	return h.keys.to_s
 end
 

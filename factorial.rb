@@ -21,3 +21,6 @@ def factorial(num)
 end
 
 puts factorial(5)
+puts factorial(8)
+puts factorial(382)
+puts factorial(908)
