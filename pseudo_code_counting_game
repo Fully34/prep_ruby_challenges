@@ -28,9 +28,7 @@ def counting_game(input_number)
 
 	count = 0
 
-	reverse = false
-
-	skip = false
+	direction = 1
 ----------------------------------------------------------------------------------------------------------------------------------------
 	while the count is less than or equal to input_number
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -42,40 +40,22 @@ def counting_game(input_number)
 ----------------------------------------------------------------------------------------------------------------------------------------
 		if count is divisible by 7 
 
-			reverse != false UNTIL the next time count is divisible by 7 (How the hell do I code this??)
+			direction = -1
 ----------------------------------------------------------------------------------------------------------------------------------------
 		if count is divisible by 11 
 
-			skip != false
-		
-				if skip != false AND reverse = false 
-
-					increment player[index] by 2 for the next count
-
-				if skip != false AND reverse != false 
-
-					decrement player[index] by 2 for next count
+			direction = direction * 2
 ----------------------------------------------------------------------------------------------------------------------------------------
-		if reverse = false 
-
-			increment the player[index] by 1 
-
-		elsif reverse != false
-
-			decrement the player[index] by 1
-----------------------------------------------------------------------------------------------------------------------------------------
-		if (player[9] is reached) AND (reverse = false)
+		if (player[9] is reached) AND (direction = 1)
 
 			go back to player[0]
-
-			continue incrementing player[index] by 1
 ----------------------------------------------------------------------------------------------------------------------------------------
-		if (player[0] is reached) AND (reverse != false)
+		if (player[0] is reached) AND (direction = -1)
 
 			go to player[9]
-
-			continue decrementing player[index] by 1
 ----------------------------------------------------------------------------------------------------------------------------------------
+	increment the index by direction
+
 	increment count += 1
 
 
