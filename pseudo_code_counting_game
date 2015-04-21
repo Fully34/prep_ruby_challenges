@@ -1,0 +1,84 @@
+What do I need for the counting game?
+
+Variables:
+
+--> Number we are currently on
+--> People Playing the game --> array?
+--> Who is saying the current number --> array of 2-value arrays?
+--> Direction of the count (+/-)
+
+
+Conditions:
+
+--> If number is divisible by 7, direction changes 
+	- until the next number that is divisble by 7
+--> If number is divisible by 11, skip next player
+	- continue counting in the same direction
+
+What do we need to do?
+
+--> start counting from 0
+--> increment the number by 1
+--> track who is saying what number
+	- make a new array by adding both the count and the player saying the number?
+
+def counting_game(input_number)
+
+	players = ["one","two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+
+	count = 0
+
+	reverse = false
+
+	skip = false
+
+	while the count is less than or equal to input_number
+
+		if count is equal to input_number
+			
+			print player[index] we are currently on
+
+			break
+
+		if count is divisible by 7 
+
+			reverse != false UNTIL the next time count is divisible by 7 (How the hell do I code this??)
+
+		if count is divisible by 11 
+
+			skip != false
+		
+				if skip != false AND reverse = false 
+
+					increment player[index] by 2 for the next count
+
+				if skip != false AND reverse != false 
+
+					decrement player[index] by 2 for next count
+
+		if reverse = false 
+
+			increment the player[index] by 1 
+
+		elsif reverse != false
+
+			decrement the player[index] by 1
+
+		if (player[9] is reached) AND (reverse = false)
+
+			go back to player[0]
+
+			continue incrementing player[index] by 1
+
+		if (player[0] is reached) AND (reverse != false)
+
+			go to player[9]
+
+			continue decrementing player[index] by 1
+
+	increment count += 1
+
+
+
+
+

@@ -4,26 +4,25 @@ def counting_game(num)
 
 	game = []
 
+	players = ["one","two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+
 	count = 0
 
 	player = 0
 
-	rev = false
+	reverse = false
 	#skip = false
 
 
 	while count < num
-		if (count%7 == 0)
-			rev = true
-			count +=1
-			player -= 1
-			game << [count,player]
+		
+		if count == num
+			puts player[index]
+			break
+		else
+			count += 1
 		end
-		count +=1
-		player +=1
-		game << [count,player]
-	end
-	print game.to_s
-end
 
-counting_game(10)
+		if (count%7 == 0)
+			reverse != false
+
